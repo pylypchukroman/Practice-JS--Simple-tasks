@@ -16,16 +16,25 @@ const images = [
 const listElem = document.querySelector('.gallery');
 console.log(listElem);
 
-const galleryElem = images.map(image => {
+// const galleryElem = images.map(image => {
 
-  const imgElem = document.createElement('img');
-  imgElem.src = image.url;
-  imgElem.alt = image.alt;
-  imgElem.width = 600;
-  const imgItemElem = document.createElement('li');
-  imgItemElem.append(imgElem);
-  return imgItemElem;
+//   const imgElem = document.createElement('img');
+//   imgElem.src = image.url;
+//   imgElem.alt = image.alt;
+//   imgElem.width = 600;
+//   const imgItemElem = document.createElement('li');
+//   imgItemElem.append(imgElem);
+//   return imgItemElem;
 
-});
-// console.log(galleryElem);
-listElem.append(...galleryElem);
+// });
+// // console.log(galleryElem);
+// listElem.append(...galleryElem);
+function renderList() {
+  const galleryElem = images.map(image => {
+    return `<li>
+    <img src="${image.url}" alt="${image.alt}" width ="400px"></img>
+    </li>`;
+  }).join('')
+listElem.insertAdjacentHTML('afterbegin', galleryElem)
+}
+renderList();
