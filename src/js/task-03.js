@@ -18,9 +18,12 @@ const listElem = document.querySelector('.gallery');
 function renderList() {
   const galleryElem = images.map(image => {
     return `<li>
-    <img src="${image.url}" alt="${image.alt}" width ="400px"></img>
+    <img src="${image.url}" alt="${image.alt}" width ="400px" height = "300px"></img>
     </li>`;
   }).join('')
 listElem.insertAdjacentHTML('afterbegin', galleryElem)
 }
 renderList();
+listElem.style.listStyle = 'none';
+listElem.style.display = 'flex';
+listElem.style.justifyContent = 'space-around';
