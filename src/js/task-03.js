@@ -14,21 +14,7 @@ const images = [
 ];
 
 const listElem = document.querySelector('.gallery');
-console.log(listElem);
 
-// const galleryElem = images.map(image => {
-
-//   const imgElem = document.createElement('img');
-//   imgElem.src = image.url;
-//   imgElem.alt = image.alt;
-//   imgElem.width = 600;
-//   const imgItemElem = document.createElement('li');
-//   imgItemElem.append(imgElem);
-//   return imgItemElem;
-
-// });
-// // console.log(galleryElem);
-// listElem.append(...galleryElem);
 function renderList() {
   const galleryElem = images.map(image => {
     return `<li>
