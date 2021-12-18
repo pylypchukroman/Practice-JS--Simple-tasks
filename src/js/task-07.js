@@ -3,7 +3,7 @@ const textElem = document.querySelector('#text');
 // const rangeElem = inputeElem.getAttribute('range');
 // console.log(inputeElem.value);
 // console.log(rangeElem.value);
-inputeElem.addEventListener('change', function () {
+inputeElem.addEventListener('input', function () {
     console.log(this.value);
     textElem.style.fontSize = `${this.value}px`;
 })
